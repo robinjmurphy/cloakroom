@@ -30,4 +30,12 @@ public class CloakroomTest {
         assertEquals(line2, checkedInObject);
     }
 
+    @Test
+    public void pickUpWithAKeyReturnsTheOriginalObject() {
+        String line3 = "...it was the epoch of belief...";
+        cloakroom.checkIn("line3", line3);
+        String checkedInObject = cloakroom.pickUp("line3");
+        assertEquals(line3, checkedInObject);
+    }
+
 }
